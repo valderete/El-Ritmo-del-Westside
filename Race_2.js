@@ -40,10 +40,10 @@ legend.append("g")
 // append SVG for Race viz to body of page
 const Race_2 = d3.select("#Race_2")
     .append("svg")
-    .attr("width", width*1.5)
+    .attr("width", width*1.6)
     .attr("height", height*1.12)
     .append("g")
-        .attr("transform",`translate(${margin.left*120},${margin.top})`)
+        .attr("transform",`translate(${margin.left*150},${margin.top})`)
 
 // LOAD DATA
 d3.csv('./data/Bexar_1950_1960_Race.csv').then( function(data) {
@@ -72,21 +72,22 @@ const xSubgroup = d3.scaleBand()
 xAxis = d3.axisBottom(xScale)
 yAxis = d3.axisLeft(yScale)
 
+// Format numbers for tooltip
+formater =  d3.format(',d')
 
 // create a tooltip
 const Race_tooltip = d3.select("#Race_2_tooltip")
     .append("div")
     .style("position", "absolute")
     .style("visibility", "hidden")
-    .style("background-color", "#49b8c5")
+    .style("background-color", "rgba(0, 0, 0, 0.8)")
     .style("border", "solid")
-    .style("border-color", "black")
-    .style("border-width", "3px")
-    .style("border-radius", "5px")
-    .style("padding-left", "5px")
-    .style("padding-right", "5px")
-    .style("padding-top", "0px")
-    .style("padding-bottom", "0px")
+    //.style("border-color", "black")
+    //.style("border-width", "3px")
+    .style("border-radius", "3px")
+    .style("padding", "6px")
+    .style("box-shadow", "-3px 3px 15px #888")
+    .style("font-size", "12px")
 
 
 // DRAW AXES
@@ -131,16 +132,15 @@ Race_2.append("g")
       .attr("stroke", "#49b8c5")
       .attr("stroke-width", 0) //;
 
-    
      // INTERACTIVITY FOR TOOLTIP
      .on("mouseover", function (event,d){
-        d3.select(this).attr("stroke-width", 4)
+        d3.select(this).attr("stroke-width", 2)
             Race_tooltip.transition()
                 .duration(200)
                 .style("visibility","visible")
     
             d3.select(this)
-            Race_tooltip.html("<span style='color:black;'><p> Count: " + d.value + "</p></span>" )                            
+            Race_tooltip.html("<span style='color:white;'><p> Count: " + formater(d.value) + "</p></span>" )                            
                 .style("left",(event.pageX)+20+"px")
                 .style("top",(event.pageY)-50+"px")
                 

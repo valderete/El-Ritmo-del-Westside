@@ -82,27 +82,27 @@ Timeline.append("g")
     .attr("id","timeline")
     .attr("cy",d => yScale(d.Y_position))
     .attr("cx", d => timelineScale(d.Date)+30)
-    .attr("r", 40)
-    .attr("stroke-width",3.5)
+    .attr("r", 55)
+    .attr("stroke-width",4)
     .attr("stroke", "white")
     .style("fill", "#ffa600")
 
     // INTERACTIVITY FOR TOOLTIP
     .on("mouseover", function (event,d){
-    d3.select(this).attr("stroke-width", 1)
+    d3.select(this).attr("stroke-width", 5).attr("r", 65)
         timeline_tooltip.transition()
             .duration(200)
             .style("visibility","visible")
 
         d3.select(this)
-        timeline_tooltip.html("<span style='color:black;'><h3>"+d.Year+"</h3><span style='color:black;'><h2>"+d.Event+"</h2><img src="+d.Media+" style='max-width:65%;height:auto; ></ahref></span><span style='color:black'><p>"+d.Description+"</p></span>" )                            
+        timeline_tooltip.html("<span style='color:black;'><h4>"+d.Year+"</h4><span style='color:black;'><h5>"+d.Event+"</h5><img src="+d.Media+" style='max-width:65%;height:auto; ></ahref></span><span style='color:black'><p>"+d.Description+"</p></span>" )        
             .style("left",(event.pageX)+10+"px")
             .style("top",(event.pageY)-400+"px")
             
     })
 
     .on("mouseout",function (event,d){
-        d3.select(this).attr("stroke-width",1)
+        d3.select(this).attr("stroke-width",2).attr("r", 45)
         timeline_tooltip.transition().style("visibility","hidden") 
     }  )     
 

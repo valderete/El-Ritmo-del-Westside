@@ -29,10 +29,10 @@ h6 {
   }
  
 .tooltip {
-  max-width: 25%; 
+  max-width: 20%; 
   background-color: rgb(241,237,218);
   border-color: black;
-  padding: 5px;
+  padding: 1%;
   z-index: 30; /* to indicate layer placement */
 }
 
@@ -67,10 +67,10 @@ div{
       background-color: rgb(241,237,218);
       grid-column: col1-start / col4-end;
       grid-row: row0-start ;
-      padding-top: 7%;
-      padding-bottom: 8%;
-      padding-right: 25%;
-      padding-left: 25%;
+      padding-top: 12%;
+      padding-bottom: 12%;
+      padding-right: 30%;
+      padding-left: 30%;
       color: black;
       text-align:justify;
       line-height: 20px;
@@ -81,8 +81,8 @@ div{
       grid-row: row1-start ;
       text-align:center;
       color: rgb(241,237,218);
-      padding-top: 5%;
-      padding-bottom: 5%;
+      padding-top: 14%;
+      padding-bottom: 14%;
     }
     .ac {
       background-color: rgb(241,237,218);
@@ -90,7 +90,7 @@ div{
       grid-row: row2-start ;
       text-align:center;
       color: black;
-      padding-top: 1%;
+      padding-top: 4%;
       padding-bottom: 0%;
       z-index:0; /* to indicate layer placement */
     }
@@ -112,7 +112,7 @@ div{
       grid-row: row3-start ;
       color: black;
       line-height: 30px;
-      padding-bottom: 4%;
+      padding-bottom: 6%;
       z-index: 1;
     }
     .bR {
@@ -122,9 +122,9 @@ div{
       line-height: 20px;
       text-align:right;
       color: black;
-      padding-top: 53%;
-      padding-left: 22%;
-      padding-right: 15%;
+      padding-top: 45%;
+      padding-left: 16%;
+      padding-right: 14%;
       z-index: 20; /* to indicate layer placement */
     }
     .cTop {
@@ -136,7 +136,8 @@ div{
       max-height: 2%;
       padding-right: 30%;
       padding-left: 30%;
-      padding-top: 3%;
+      padding-top: 8%;
+      padding-bottom: 5%;
       z-index: 20; /* to indicate layer placement */
     }
     .c {
@@ -144,16 +145,16 @@ div{
       grid-column: col1-start / col3-start;
       grid-row: row4-start ;
       color: white;
-      padding-top: 25%;
-      padding-bottom: 5%;
+      padding-top: 38%;
+      padding-bottom: 18%;
     }
     .d {
       background-color: rgb(100,119,185);
       grid-column: col3-start / col4-end;
       grid-row: row4-start ;
       color: white;
-      padding-top: 28%;
-      padding-bottom: 5%;
+      padding-top: 42%;
+      padding-bottom: 18%;
     }
 
     .e {
@@ -162,8 +163,9 @@ div{
       color: black;
       grid-row: row5-start ;
       text-align: left;
-      padding-left: 22%;
-      padding-right: 22%
+      padding-left: 30%;
+      padding-right: 30%;
+      padding-top: 8%;
     }
  /* REMOVED box f */
   .g {
@@ -174,26 +176,26 @@ div{
       padding-top: 1.5%;
       padding-right: 5%;
       padding-left: 5%;
-      padding-bottom: 5%;
+      padding-bottom: 9%;
     }
     .h {
       background-color: rgb(100,119,185);
       grid-column: col1-start / col3-start;
       grid-row: row7-start ;
       color: rgb(241,237,218);
-      padding-top: 5%;
+      padding-top: 12%;
       padding-right: 3%;
       padding-left: 3%;
-      padding-bottom: 5%;
+      padding-bottom: 12%;
     }
 
     .i {
       background-color: rgb(100,119,185);
       grid-column: col3-start / col4-end;
       grid-row: row7-start ;
-      padding-top: 13%;
-      padding-right: 5%;
-      padding-left: 5%;
+      padding-top: 27%;
+      padding-right: 8%;
+      padding-left: 8%;
       padding-bottom: 1.5%;
       text-align: left;
       color: rgb(241,237,218);

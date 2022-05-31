@@ -26,7 +26,7 @@ yAxis2 = d3.axisLeft(yScale2)
 
 const Foreign_Chart = d3.select("#Foreign_Combined")
   .append("svg")
-  .attr("width", width*1.05)
+  .attr("width", width*1.1)
   .attr("height", height*0.65)
   .attr("transform",`translate(${margin.left-50},${margin.top})`)
 
@@ -49,7 +49,7 @@ Foreign_Chart.append("g")
     .append("text") // add xAxis label
     .text("Country of Origin")
     .attr("font-size", "14")
-    .attr("x",-height*0.15)
+    .attr("x",-height*0.5)
     .attr("y",-width/5.5)
     .attr("fill", "white")
     .attr("transform","rotate(-90)")
